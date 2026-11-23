@@ -1,0 +1,2 @@
+ALTER TABLE "answers" ADD COLUMN "image_id" varchar(255) NOT NULL;--> statement-breakpoint
+ALTER TABLE "answers" ADD CONSTRAINT "answers_image_id_files_id_fk" FOREIGN KEY ("image_id") REFERENCES "public"."files"("id") ON DELETE cascade ON UPDATE no action;
